@@ -3,7 +3,7 @@ Repository for deploying Operator.sol to various EVM-based blockchains
 
 ## Environment Variables
 
-You need to setup a .env file in this folder to support the indidual scripts.
+You need to setup a .env file in this folder to support the individual scripts.
 
     export WEB3_INFURA_PROJECT_ID=...
     export ETHERSCAN_TOKEN=...
@@ -37,3 +37,11 @@ To verify the contract:
 To grant your node access to submit transactions through this Oracle:
 
     brownie run scripts/mumbai/permissions.py --network polygon-test
+    
+## Step 4. Deploy test requesting smart contract to interact with operator.sol
+
+    brownie run scripts/deploy.py --network polygon-test
+    
+## Step 5. Send request to operator.sol
+
+    brownie run scripts/requestBytes.py --network polygon-test
