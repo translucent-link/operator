@@ -40,8 +40,12 @@ To grant your node access to submit transactions through this Oracle:
     
 ## Step 4. Deploy test requesting smart contract to interact with operator.sol
 
+To deploy the testing smart contract:
+
     brownie run scripts/deploy.py --network polygon-test
     
-## Step 5. Send request to operator.sol
+## Step 5. Test operator.sol
+
+To send request to operator.sol:
 
     brownie run scripts/requestBytes.py --network polygon-test
