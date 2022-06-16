@@ -13,7 +13,7 @@ You need to setup a .env file in this folder to support the indidual scripts.
 
 To see a list support networks
 
-    brownie run scripts/deploy.py --network polygon-test
+    brownie networks list
 
 You need to setup a "deployer" account
 
