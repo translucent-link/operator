@@ -37,3 +37,7 @@ To verify the contract:
 To grant your node access to submit transactions through this Oracle:
 
     brownie run scripts/mumbai/permissions.py --network polygon-test
+
+## Support & Help
+
+Feel free to open a [Github Issue](https://github.com/translucent-link/stonechat/issues) or come find us in the [Translucent Discord](https://discord.gg/JxKT6R9Xpz).
