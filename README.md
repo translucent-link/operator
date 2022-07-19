@@ -38,6 +38,19 @@ To grant your node access to submit transactions through this Oracle:
 
     brownie run scripts/mumbai/permissions.py --network polygon-test
 
+## Testing your node with Get > Uint256
+
+Assuming you've got a Get > Uint256 job deployed to the node you can run the test contract and script to test the job execution.
+
+First deploy the test client contract:
+
+    brownie run scripts/mumbai/test_deploy.py --network polygon-test
+
+Then customise the test_run.py script to match your environment, before running run it:
+
+    brownie run scripts/mumbai/test_run.py --network polygon-test
+
+
 ## Support & Help
 
 Feel free to open a [Github Issue](https://github.com/translucent-link/stonechat/issues) or come find us in the [Translucent Discord](https://discord.gg/JxKT6R9Xpz).
