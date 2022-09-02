@@ -25,18 +25,21 @@ You need to setup a "deployer" account
 To deploy run:
 
     brownie run scripts/mumbai/deploy.py --network polygon-test
+    brownie run scripts/arbitrum/deploy.py --network arbitrum-main
 
 ## Step 2. Verify
 
 To verify the contract:
 
     brownie run scripts/mumbai/verify.py --network polygon-test
+    brownie run scripts/arbitrum/verify.py --network arbitrum-main
 
 ## Step 3. Permissions
 
 To grant your node access to submit transactions through this Oracle:
 
     brownie run scripts/mumbai/permissions.py --network polygon-test
+    brownie run scripts/arbitrum/permissions.py --network arbitrum-main
 
 ## Testing your node with Get > Uint256
 
