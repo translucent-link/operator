@@ -18,14 +18,14 @@ contract GetUint256Test is ChainlinkClient, ConfirmedOwner {
 
     function requestValue(
         address _oracle,
-        string memory _jobId,
+        bytes32 _jobId,
         string memory _url,
         int256 _multiply,
         string memory _path,
         uint256 _payment
     ) public onlyOwner {
         Chainlink.Request memory req = buildChainlinkRequest(
-            stringToBytes32(_jobId),
+            _jobId,
             address(this),
             this.fulfillValue.selector
         );
@@ -41,21 +41,5 @@ contract GetUint256Test is ChainlinkClient, ConfirmedOwner {
     {
         emit RequestValue(_requestId, _value);
         value = _value;
-    }
-
-    function stringToBytes32(string memory source)
-        private
-        pure
-        returns (bytes32 result)
-    {
-        bytes memory tempEmptyStringTest = bytes(source);
-        if (tempEmptyStringTest.length == 0) {
-            return 0x0;
-        }
-
-        assembly {
-            // solhint-disable-line no-inline-assembly
-            result := mload(add(source, 32))
-        }
     }
 }
